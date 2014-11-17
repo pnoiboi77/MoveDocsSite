@@ -1,0 +1,520 @@
+/*
+
+My Custom CSS
+=============
+
+Author:  Brad Hussey
+Updated: August 2013
+Notes:	 Hand coded for Udemy.com
+
+*/
+
+
+/* --------------------------------------
+   Layout
+   -------------------------------------- */
+
+/*.navbar-nav {
+   margin-top: 35px;
+}*/
+
+
+
+.navbar-brand {
+   padding: 0  15px;
+}
+
+.pageStarter {
+   margin-top: 50px;
+   margin-bottom: 20px;
+}
+body {
+   
+}
+  
+.title {
+   border: 5px dashed #929293;
+}
+
+.navbar-nav>.active>a:hover,
+.navbar-nav>.active>a
+ {
+   background: #428BCA;
+}
+
+.btn-default {
+   
+}
+
+.btn-primary {
+   background: #428BCA;
+}
+
+ li {
+display:inline;
+list-style-type: none;
+}
+
+footer li {
+display: block;
+}
+.section2 {
+   background: #ECF5FA;
+   
+}
+.section1 {
+   background: #D0DEE7;
+}
+.section3 {
+   background: #D0DEE7;
+}
+
+.section4 {
+   background: #FFF;
+   
+}
+
+h1 {
+
+   font-size: 45px;
+   color: #336C93;
+   border-radius: 70px;
+   padding: 20px 0;
+   text-align: center;
+   
+   
+}
+
+h2 {
+   font-size: 30px;
+   color: #428BCA;
+   margin: 0;
+   
+ 
+}
+
+.section2, .section3, .section4{
+   text-align: center;
+}
+.feature {
+   padding-top: 30px;
+}
+
+.panel-heading{
+   background: #336C93;
+}
+
+.panel-title {
+   font-size: 30px;
+   color: white;
+}
+
+.panel {
+   
+}
+.row {
+   padding: 30px 0;
+}
+
+.top {
+   border-top: none;
+}
+
+
+/*.navbar-brand {
+   height: 80px;
+}*/
+
+/* --------------------------------------
+   Typography
+   -------------------------------------- */
+body {
+   -webkit-font-smoothing: antialiased;
+   text-rendering: optimizelegibility;
+   color: #336C93;
+   }
+
+h1,h2,h3,h4,a,p {
+   
+}
+
+table, th, .section1 {
+   text-align: center;
+}
+footer {
+   background: #333;
+   color: #eee;
+   font-size: 11px;
+   padding: 20px;
+   width: 100%;
+}
+
+
+.well .page-header {
+   margin-top: 0;
+}
+
+.well .page-header h1 {
+   margin-top: 0;
+}
+
+
+.well {
+   margin: 0;
+}
+
+#naviBack {
+   opacity:.95;
+   background: #336C93;
+}
+
+#naviBack a {
+   color: #e3e3e3;
+  
+}
+
+
+
+#sec1con {
+   
+}
+/* --------------------------------------
+   Navbar
+   -------------------------------------- */
+#searchInput{
+   width: 200px;
+
+}
+   
+   
+/* --------------------------------------
+   Carousel
+   -------------------------------------- */
+#myCarousel {
+   
+}
+
+
+.carousel-caption {
+   font-size: 24px;
+   color:  black;
+}
+
+.carousel-caption h4 {
+   font-size: 32px;
+}
+
+#myCarousel .item { height: 400px; }
+
+
+/*
+#slide1 {
+   background: url('../../images/slide.png') top center no-repeat;
+}
+
+#slide2 {
+   background: url('../../images/slide1.png') top center no-repeat;
+}
+
+#slide3 {
+   background: url('../../images/slide2.png') top center no-repeat;
+}
+*/
+.plans {
+
+   text-align: center;
+   margin: auto;
+   width: 70%;
+}
+h4 {
+   margin: 0;
+}
+
+.feature {
+   margin: 0;
+}
+
+.carousel-inner {
+   background:#e3e3e3 ;
+}
+
+#navItem {
+   height: 30px;
+}
+
+#advertImg {
+   background: url(../../images/advertmd.png) top center no-repeat;
+   height: 550px;
+}
+
+#advertImg2 {
+   background: url(../../images/family11.png) top center no-repeat;
+   height: 350px;
+}
+
+#advertImg3 {
+   background: url(../../images/office1.png) top center no-repeat;
+   height: 330px;
+}
+#advertImg4 {
+   background: url(../../images/law1.png) top center no-repeat;
+   height: 330px;
+}
+
+#f1 {
+   background: url(../../images/f11.png) top center no-repeat;
+   height: 330px;
+}
+#f2 {
+   background: url(../../images/f21.png) top center no-repeat;
+   height: 330px;
+}
+
+#f3 {
+   background: url(../../images/f31.png) top center no-repeat;
+   height: 330px;
+}
+
+#f4 {
+   background: url(../../images/f41.png) top center no-repeat;
+   height: 330px;
+}
+
+#f5 {
+   background: url(../../images/f51.png) top center no-repeat;
+   height: 330px;
+}
+
+#f6 {
+   background: url(../../images/f61.png) top center no-repeat;
+   height: 330px;
+}
+
+#s1 {
+   background: url(../../images/s1.png) top center no-repeat;
+   height: 330px;
+}
+
+#s2 {
+   background: url(../../images/s2.png) top center no-repeat;
+   height: 330px;
+}
+
+
+
+/* --------------------------------------
+   Global Styles
+   -------------------------------------- */
+.alert {
+   margin-top: 20px;
+   display: none;
+}
+
+.well {
+   margin: 20px 0;
+}
+
+#features {
+   text-align: center;
+}
+
+.feature img {
+   margin: 0 0 20px;
+}
+
+
+/* --------------------------------------
+   Media Queries
+   -------------------------------------- */
+
+/* Portrait & landscape phone */
+@media (max-width: 480px) {
+	
+}
+
+
+
+
+
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+#myCarousel .item { height: 310px; }
+
+
+#advertImg {
+   background: url(../../images/advertsm.png) top center no-repeat;
+   height: 330px;
+}
+
+h1 {
+   padding: 10px 0 10px;
+   font-size: 50px;
+   
+}
+
+.carousel-caption {
+   font-size: 16px;
+}
+
+.carousel-caption h4 {
+   font-size: 22px;
+}
+
+}
+
+/* Large desktop */
+@media (min-width: 1200px) {
+#myCarousel .item { height: 500px; }
+
+
+}
+
+/*
+
+         <h1>Compare</h1>
+         
+
+         <table class="table table-hover">
+                  <tr>
+                     <th>FEATURES</th>
+                     <th>Personal</th>
+                     <th>Professional</th>
+                     <th>Legal</th>
+
+                  </tr>
+                  <tr>   
+                     <td>500MB</td>
+                     <td><span class="glyphicon glyphicon-ok"></span></td>
+                     <td><span class="glyphicon glyphicon-ok"></span></td>
+                     <td><span class="glyphicon glyphicon-ok"></span></td>
+
+                  </tr>
+                  <tr>    
+                     <td>500MB</td>
+                     <td><span class="glyphicon glyphicon-ok"></span></td>
+                     <td><span class="glyphicon glyphicon-ok"></span></td>
+                     <td><span class="glyphicon glyphicon-ok"></span></td>
+
+                  </tr>
+                  <tr>    
+                     <td>500MB</td>
+                     <td><span class="glyphicon glyphicon-ok"></span></td>
+                     <td><span class="glyphicon glyphicon-ok"></span></td>
+                     <td><span class="glyphicon glyphicon-ok"></span></td>
+
+                  </tr>
+                  
+                  <tr>    
+                     <td>500MB</td>
+                     <td><span class="glyphicon glyphicon-ok"></span></td>
+                     <td><span class="glyphicon glyphicon-ok"></span></td>
+                     <td><span class="glyphicon glyphicon-ok"></span></td>
+
+                  </tr>
+                  
+                  <tr>    
+                     <td>500MB</td>
+                     <td><span class="glyphicon glyphicon-ok"></span></td>
+                     <td><span class="glyphicon glyphicon-ok"></span></td>
+                     <td><span class="glyphicon glyphicon-ok"></span></td>
+
+                  </tr>
+                  
+                  <tr>    
+                     <td>500MB</td>
+                     <td><span class="glyphicon glyphicon-ok"></span></td>
+                     <td><span class="glyphicon glyphicon-ok"></span></td>
+                     <td><span class="glyphicon glyphicon-ok"></span></td>
+
+                  </tr>
+                  
+                  <tr>    
+                     <td>500MB</td>
+                     <td></td>
+                     <td><span class="glyphicon glyphicon-ok"></span></td>
+                     <td><span class="glyphicon glyphicon-ok"></span></td>
+
+                  </tr>
+                  
+                  <tr>    
+                     <td>500MB</td>
+                     <td></td>
+                     <td><span class="glyphicon glyphicon-ok"></span></td>
+                     <td><span class="glyphicon glyphicon-ok"></span></td>
+
+                  </tr>
+                  <tr>    
+                     <td>500MB</td>
+                     <td></td>
+                     <td><span class="glyphicon glyphicon-ok"></span></td>
+                     <td><span class="glyphicon glyphicon-ok"></span></td>
+
+                  </tr>
+                  
+                  <tr>    
+                     <td>500MB</td>
+                     <td></td>
+                     <td></td>
+                     <td><span class="glyphicon glyphicon-ok"></span></td>
+
+                  </tr>
+                  
+                  
+
+
+               </table>
+
+               <div class="row panel">
+            <h1>Movedocs Basic</h1>
+            <div class="col-lg-6 col-xs-12">
+               <h2>Individual Plan</h2>
+               <h3>Need a highly secure easy to use filing system that you can access from anywhere? Let me introduce you to what our features can do!</h3>
+               
+                  <div class="plans" >
+                     <h4>File Cabinet</h4>
+                     <p >With the filing cabinet, you can create custom drawers with the ability to easily drag and drop files.</p>
+                     
+                  </div>
+                  
+                  <div class="plans">
+                     <h4>Collaboration</h4>
+                     <p >With Collaboration, you can invite users to download or upload files to your folders. Select which folder and files can be viewed, Limit the amount of time they can view.</p>
+                  
+                  
+                  </div>
+                  
+                  <div class="col-lg-12">
+                  <a href="pricing.html" class="btn btn-default btn-large btn-block">See Pricing!</a>
+               </div>
+
+            </div>
+            <div class="col-lg-6 col-xs-12">
+               <h2>Family Plan</h2>
+               <h3>Need to store important family documents in a filing system that only your family can access? We have you covered with our </h3>
+               
+               <div class="plans" >
+               <h4>File Cabinet</h4>
+               <p >With the filing cabinet, you can create custom drawers with the ability to easily drag and drop files.</p>
+               <h2></h2>
+               </div>
+               
+
+               
+               <div class="plans" >
+               <h4>Collaboration</h4>
+               <p >With Collaboration, you can invite users to download or upload files to your folders. Select which folder and files can be viewed, Limit the amount of time they can view.</p>
+               
+               </div>
+
+               <div class="plans" >
+               <h4>Sharing</h4>
+               <p >Share files with the users in your group instantly with ease.</p>
+               <h2></h2>
+               
+               </div>
+               <a href="pricing.html" class="btn btn-default btn-large btn-block">See Pricing!</a>
+               
+               
+            </div>
+         </div>

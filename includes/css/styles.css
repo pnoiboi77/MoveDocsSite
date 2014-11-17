@@ -18,7 +18,9 @@ Notes:	 Hand coded for Udemy.com
    margin-top: 35px;
 }*/
 
-
+#slide4, #slide5, #slide6 {
+   color: #428BCA;
+}
 
 .navbar-brand {
    padding: 0  15px;
@@ -193,11 +195,17 @@ footer {
 #myCarousel {
    
 }
+.caro {
+background: #e3e3e3; 
+opacity: .75;
+}
 
 
 .carousel-caption {
    font-size: 24px;
    color:  black;
+
+
 }
 
 .carousel-caption h4 {

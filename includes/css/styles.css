@@ -95,6 +95,10 @@ h2 {
  
 }
 
+.green {
+   color: green;
+}
+
 .section2, .section3, .section4{
    text-align: center;
 }
@@ -196,14 +200,14 @@ footer {
    
 }
 .caro {
-background: #e3e3e3; 
+background: #336C93; 
 opacity: .75;
 }
 
 
 .carousel-caption {
    font-size: 24px;
-   color:  black;
+   color:  white;
 
 
 }

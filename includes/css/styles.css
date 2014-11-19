@@ -234,9 +234,11 @@ opacity: .75;
 */
 .plans {
 
-   text-align: center;
+   text-align: left;
    margin: auto;
    width: 70%;
+   margin-bottom: 5px;
+   margin-top: 5px;
 }
 h4 {
    margin: 0;

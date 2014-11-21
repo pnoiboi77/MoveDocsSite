@@ -144,7 +144,7 @@ h1,h2,h3,h4,a,p {
    
 }
 
-table, th, .section1 {
+table, th, .section1,  .pancen{
    text-align: center;
 }
 footer {
@@ -155,7 +155,7 @@ footer {
    width: 100%;
 }
 
-
+ 
 .well .page-header {
    margin-top: 0;
 }

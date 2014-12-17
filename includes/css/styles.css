@@ -257,9 +257,15 @@ h4 {
    height: 30px;
 }
 
+#sec {
+   background: url(../../images/sec.png) top center no-repeat;
+   height: 260px;
+}
+
 #advertImg {
    background: url(../../images/advertmd.png) top center no-repeat;
    height: 550px;
+   width: 960px;
 }
 
 #advertImg2 {

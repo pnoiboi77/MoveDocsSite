@@ -95,6 +95,15 @@ h2 {
  
 }
 
+.contact{
+   width: 50%;
+   border-left: 6px solid;
+   border-right:  6px solid;
+   border-top:  6px solid;
+   text-align: center;
+
+}
+
 .green {
    color: green;
 }
@@ -126,7 +135,6 @@ h2 {
    border-top: none;
    
 }
-
 
 /*.navbar-brand {
    height: 80px;

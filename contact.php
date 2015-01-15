@@ -121,29 +121,27 @@
 
 						<h2 style="text-align: center;"><b>Quick Contact</b></h2>
 						<h4 style="text-align: center; margin-bottom: 10px">During business days MoveDocs support will respond within the hour.</h4>
-						<p id="feedback"><?php echo $feedback; ?></p>
+						<h4 id="feedback"><?php echo $feedback; ?></h4>
 
-						<div class="form-group plans" >
-					    	<label for="company">Company: </label>
-					    	<input type="text" class="form-control" id="company" name='company'>
-						</div>
+						
 
-						<div class="form-group plans " >
-							<label for="name">Name: </label>
-					    	<input type="text" class="form-control" id="name" name='name'>
-						</div>
 
 						<div class="form-group plans " >
 					    	<label for="email">Email address:</label>
 					   		<input type="email" class="form-control" id="email" name='email'>
 						</div>
 
-					    <div class="form-group plans " style="margin-bottom: 10px;">
-					    <label for="message">Message:</label>
-					    <textarea class="form-control" rows="3" id="samuraisames" name='message'></textarea>
+						<div class="form-group plans" >
+					    	<label for="subject">Subject: </label>
+					    	<input type="text" class="form-control" id="subject" name='subject'>
 						</div>
 
-					    <button type="submt" name="submit" class="btn btn-block plans " style="text-align: center; background:#333; color: white;" value="Submit">Submit</button>
+					    <div class="form-group plans " style="margin-bottom: 10px;">
+					    <label for="message">Message:</label>
+					    <textarea class="form-control" rows="3" id="message" name='message'></textarea>
+						</div>
+
+					    <button type="submit" name="submit"  class="btn btn-block plans" style="text-align: center; background:#333; color: white;" >Submit</button>
 					    
 				    </form>
 
@@ -217,28 +215,17 @@
 
 
 				<?php
-					$to = 'espanola.kyle@gmail.com';
-					$subject= 'CustomerService';
-					$company = $_POST['company'];
-					$name = $_POST['name'];
+					$to = "kyle@movedocs.com";
+					$subject= $_POST['subject'];
 					$email = $_POST['email'];
 					$message = $_POST['message'];
-
-					$body = <<EMAIL
-					Company: $company
-					Name: $name
-					Email: $email
-					Message: $body
-
-					EMAIL;
-
-					$header = 'From: $email';
+					$header = "From: $email";
 
 					if($_POST ){
 						if($name == '' || $email == '' || $message == ''){
-							$feedback = 'Name, Email, and Message are required.'
+							$feedback = 'Name, Email, and Message are required.';
 						}else {
-							mail($to, $subject, $body, $header);
+							mail($to, $subject, $message, $header);
 							$feedback = 'The email has been sent, we will contact you within the hour. Thanks!';
 						}
 						

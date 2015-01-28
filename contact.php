@@ -66,11 +66,11 @@
 
 
 							<li >
-								<a href="solution.html" >Security</a>
+								<a href="security.html" >Security</a>
 							</li>
 
 							<li class="active">
-								<a href="contact.html" >Contact Us</a>
+								<a href="contact.php" >CONTACT US</a>
 							</li>
 
 							
@@ -100,56 +100,138 @@
 
 
 
-				<div class="row" id="featuresHeading">
-					<div class="col-12">
-						<h1 style="font-size:"><b>Contact us</b></h1>
-						<h2 ><b>MoveDocs is there for you.</b> </h2>
-							<h4 style="margin: 10px 0"> Contact MoveDocs with any questions, concerns, technical support, or just to say "hello". </h4>							
-							<h4  style=" color: #428BCA; text-align:center;"><span class="glyphicon glyphicon-phone"></span><b>    Phone: 800-682-9081     <br> Email: customersupport@movedocs.com <span class="glyphicon glyphicon-envelope"></span> </b></h4>
-							
-							
-							
-
-						
-
-					</div>
-				</div>
-
-				<div class="contact plans" style="margin-top: -20px">
-
-					<form role="form " method="post" style="margin: 40px 0 30px" action="?">
-
-						<h2 style="text-align: center;"><b>Quick Contact</b></h2>
-						<h4 style="text-align: center; margin-bottom: 10px">During business days MoveDocs support will respond within the hour.</h4>
-						<h4 id="feedback"><?php echo $feedback; ?></h4>
-
-						
-
-
-						<div class="form-group plans " >
-					    	<label for="email">Email address:</label>
-					   		<input type="email" class="form-control" id="email" name='email'>
-						</div>
-
-						<div class="form-group plans" >
-					    	<label for="subject">Subject: </label>
-					    	<input type="text" class="form-control" id="subject" name='subject'>
-						</div>
-
-					    <div class="form-group plans " style="margin-bottom: 10px;">
-					    <label for="message">Message:</label>
-					    <textarea class="form-control" rows="3" id="message" name='message'></textarea>
-						</div>
-
-					    <button type="submit" name="submit"  class="btn btn-block plans" style="text-align: center; background:#333; color: white;" >Submit</button>
-					    
-				    </form>
-
-				</div>
+		<div class="row" id="featuresHeading">
+			<div class="col-12">
+				<h1 style="font-size:"><b>Contact us</b></h1>
+				<h2 ><b>MoveDocs is there for you.</b> </h2>
+								
+					<h4  style=" color: #428BCA; text-align:center; margin-top: 12px;"><span class="glyphicon glyphicon-phone"></span><b>    Phone: 800-682-9081     <br> Email: customersupport@movedocs.com <span class="glyphicon glyphicon-envelope"></span> </b></h4>
 					
+					
+					
+
+				
 
 			</div>
 		</div>
+<?php
+
+
+	$to = "kyle@movedocs.com";
+	$sub = "MoveDocs Customer Service";
+
+	
+	// define variables and set to empty values
+	$Err =  "field is required!";
+
+	if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+		if (empty($_POST["subject"])) {
+   			$Err1 = "  *Subject ". $Err;
+ 		} else {
+ 			$subject = $_POST["subject"];
+ 		}
+
+ 		if (empty($_POST["email"])) {
+   			$Err2 = "  *Email ". $Err;
+ 		} else {
+ 			$email = $_POST["email"];
+ 		}
+
+ 		if (empty($_POST["message"])) {
+   			$Err3 = "  *Message ". $Err;
+ 		} else {
+
+			$message = $_POST["message"];
+ 		}
+
+ 		
+ 		
+
+ 		
+ 		
+ 		if (!empty($_POST["message"]) && !empty($_POST["email"]) && !empty($_POST["subject"])) {
+
+	 		
+
+
+			 function clean_string($string) {
+ 
+      		$bad = array("content-type","bcc:","to:","cc:","href");
+ 
+      		return str_replace($bad,"",$string);
+ 
+   			}
+
+			$body = "Form details below. \n\n";
+
+			$body .= "Email: \n".clean_string($email)."\n\n";
+			$body .= "Subject: \n".clean_string($subject)."\n\n";
+			$body .= "Message: \n".clean_string($message)."\n\n";
+
+			$header = 'From ' .$email. "\r\n" .
+			'Reply-To:'.$email." \r\n" .
+			'X-Mailer: PHP/' . phpversion();
+
+
+	 		//echo $to."<br />".$subject."<br />".$message."<br />".$email
+	 		@mail($to, $sub, $body, $header);
+			$feedback = "Your message has been sent, We will get back to you within the hour!";
+			
+		} else {
+			$feedback = "There was an error! Please check the following fields";
+		}
+	 
+	} 
+
+	
+
+
+
+?>
+
+		<div class="contact plans" style="margin-top: -20px">
+
+			<form role="form " method="post" style="margin: 40px 0 30px" action=" <?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+
+				<h2 style="text-align: center;"><b>Quick Contact</b></h2>
+
+				<!--<span style="font-size: 20px; margin: 20px 10px;" class="error" id="feedback"><?php echo $feedback; ?></span>-->
+				<div class="alert alert-success alert-block fade in" id="success"><?php echo $feedback; ?></div>
+
+				<div class="alert alert-success alert-block fade in" id="success"><?php echo $feedback; ?>
+					<button></button>
+				</div>
+
+				<div class="form-group plans " >
+			    	<label for="email">Email address:</label><span class="error plans"  style="color: red;"> <?php echo $Err2;?></span>
+			   		<input type="email" class="form-control" id="email" name='email'>
+				</div>
+				
+
+				<div class="form-group plans" >
+			    	<label for="subject">Subject: </label><span class="error plans" style="color: red;"><?php echo $Err1;?></span>
+			    	<input type="text" class="form-control" id="subject" name='subject'>
+				</div>
+				
+
+			    <div class="form-group plans " style="margin-bottom: 10px;">
+			    <label for="message">Message:</label><span class="error plans" style="color: red;"><?php echo $Err3;?></span>
+			    <textarea class="form-control" rows="3" id="message" name='message'></textarea>
+				</div>
+				
+
+			    <button type="submit" name="submit"  class="btn btn-block plans" style="text-align: center; background:#333; color: white;" >Submit</button>
+			    
+		    </form>
+
+
+
+		</div>
+			
+
+	</div>
+</div>
 
 		
 
@@ -176,9 +258,10 @@
 							<li><a href="index.html">Home</a></li>
 							<li><a href="personal.html">Personal</a></li>
 							<li><a href="office.html">Office</a></li>
-							<li><a href="legal.html">Attorney Services</a></li>
+							<li><a href="legal.html">Law Firm</a></li>
 							<li><a href="pricing.html">Pricing</a></li>
 							<li><a href="security.html">Security</a></li>
+							<li><a href="contact.php">Contact Us</a></li>
 							
 						</ul>
 					</div><!-- end col-sm-2 -->
@@ -212,23 +295,3 @@
 	</body>
 </html>
 
-
-
-				<?php
-					$to = "kyle@movedocs.com";
-					$subject= $_POST['subject'];
-					$email = $_POST['email'];
-					$message = $_POST['message'];
-					$header = "From: $email";
-
-					if($_POST ){
-						if($name == '' || $email == '' || $message == ''){
-							$feedback = 'Name, Email, and Message are required.';
-						}else {
-							mail($to, $subject, $message, $header);
-							$feedback = 'The email has been sent, we will contact you within the hour. Thanks!';
-						}
-						
-					}
-
-				?>
